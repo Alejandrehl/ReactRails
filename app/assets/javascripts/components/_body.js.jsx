@@ -77,7 +77,7 @@ class Body extends React.Component {
   }
 
   componentDidMount(){
-      fetch('/api/v1/fruits')
+      fetch('/api/v1/fruits.json')
         .then((response) => {return response.json()})
         .then((data) => {this.setState({ fruits: data }) });
   }
@@ -85,8 +85,9 @@ class Body extends React.Component {
   render(){
       return(
         <div>
-          <NewFruit handleFormSubmit={this.handleFormSubmit}/>
           <AllFruits fruits={this.state.fruits} handleDelete={this.handleDelete} handleUpdate={this.handleUpdate}/>
+          <br/>
+          <NewFruit handleFormSubmit={this.handleFormSubmit}/>
         </div>
       )
     }

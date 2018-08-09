@@ -1,7 +1,7 @@
 const Main = (props) => {
   return(
-    <div>
-      <h1>Fruits are great!</h1>
+    <div className="container">
+      <h1 className="text-center">Lista de frutas</h1>
       <Body />
     </div>
   )

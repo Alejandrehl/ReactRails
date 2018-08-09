@@ -3,6 +3,7 @@ const AllFruits = (props) => {
       return(
         <div key={fruit.id}>
           <Fruit fruit={fruit} handleDelete={props.handleDelete} handleUpdate={props.handleUpdate}/>
+          <br/>
         </div>
       )
     })
